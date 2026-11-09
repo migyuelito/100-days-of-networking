@@ -47,7 +47,7 @@ Every entry labels what I did on my own:
 
 | Phase | Days | Focus | Status |
 |---|---|---|---|
-| 1 | 1–60 | CCNA refresh: guided lab, rebuild, change or fault, verify | {{STATUS}} |
+| 1 | 1–60 | CCNA refresh: guided lab, rebuild, change or fault, verify | **In Progress** |
 | 2 | 61–80 | Original scenarios combining switching, routing, services, and ACLs | Planned |
 | 3 | 81–100 | Campus network built in stages, with outage testing | Planned |
 | Optional | 101–365 | Advanced routing, security, automation, network operations | Planned |
@@ -60,7 +60,7 @@ Pacing, scenario ideas, and the campus test plan: [docs/roadmap.md](docs/roadmap
 
 | Day | Date | Topic | Source | My work | Evidence |
 |---|---|---|---|---|---|
-| [001](days/day-001/README.md) | {{YYYY-MM-DD}} | Packet Tracer setup · the subnet boundary | Jeremy's IT Lab Day 1 + Day 1 Lab | {{LABELS}} | [Files](days/day-001/evidence/) |
+| [001](days/day-001/README.md) | 2026-11-9 | Packet Tracer setup · the subnet boundary | Jeremy's IT Lab Day 1 + Day 1 Lab | **Guided** | [Files](days/day-001/evidence/) |
 
 ## Skills map
 
@@ -77,7 +77,7 @@ Pacing, scenario ideas, and the campus test plan: [docs/roadmap.md](docs/roadmap
 
 ## Tools
 
-Cisco Packet Tracer {{PT_VERSION}} · Git and GitHub · {{DIAGRAM_TOOL}}
+Cisco Packet Tracer 9.0.1 · Git and GitHub · Draw.io
 
 ## Sources and attribution
 
