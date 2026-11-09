@@ -5,8 +5,6 @@ flowchart LR
     P1["Phase 1 · Days 1–60<br/>CCNA refresh"] --> P2["Phase 2 · Days 61–80<br/>Original scenarios"] --> P3["Phase 3 · Days 81–100<br/>Campus build"] -.-> P4["Optional · Days 101–365<br/>Specialize"]
 ```
 
-The day numbers are targets, not a contract. If a block runs long, let it, and slide the next one. A multi-day investigation can become a project; link the daily entries to it.
-
 ## Phase 1: Days 1–60, CCNA refresh
 
 Every day uses the loop: **guided lab → rebuild from a blank file → change a requirement or plant a fault → verify with tests → explain.** A day counts as done when its entry has a work type, at least two tests with expected, actual, and evidence, and one "why."
