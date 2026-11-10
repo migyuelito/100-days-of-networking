@@ -15,7 +15,7 @@
 
 ## Topology
 
-
+![Day 001 topology:](evidence/01-topology.png)
 
 ## What happened and why
 
