@@ -15,7 +15,7 @@
 
 ## Topology
 
-![Day 001 topology:](001-topology.drawio.png)
+![Day 001 topology:](evidence/001-topology.drawio.png)
 
 ## What happened and why
 
