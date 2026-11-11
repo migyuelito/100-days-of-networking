@@ -21,4 +21,4 @@
 
 Limited testing and configuration for this specific day as it is used as a general start and introduction to Packet Tracer and the many networking symbols and connections.
 
-**Next:** [Day 002](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-002/README.md) · **Interfaces & Cables**
+**Next:** [Day 002 · Interfaces & Cables](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-002/README.md)
