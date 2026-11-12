@@ -17,7 +17,6 @@
 
 ### Tasks
 
-<WritingBlock id="63821" variant="document">### Tasks
 - [x] 1. Change the hostnames of the router and switch to the appropriate names (R1, SW1).
   - My Solution: Enter configure terminal and use the hostname command.
 - [x] 2. Configure an unencrypted enable password of CCNA on both devices.
@@ -39,7 +38,7 @@
   - Question: What encryption type number is used for the encrypted enable secret?
   - My Solution: The enable secret password uses Type 5 (MD5) in this configuration.
 - [x] 10. Save the running configuration to the startup configuration.
-  - My Solution: Use write memory to save the running configuration to the startup configuration.</WritingBlock>
+  - My Solution: Use write memory to save the running configuration to the startup configuration.
 
 ## Synopsis
 
