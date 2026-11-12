@@ -33,20 +33,20 @@
 
 - [x] 6. View the password in the running configuration
 
-7. Configure a more secure, encrypted enable password of 'Cisco' on both devices
+- [x] 7. Configure a more secure, encrypted enable password of 'Cisco' on both devices
             **My Solution:** In **configure terminal** use the **enable secret** command and enter *Cisco*
 
-8. Exit back to user EXEC mode and then return to privileged EXEC mode.
+- [x] 8. Exit back to user EXEC mode and then return to privileged EXEC mode.
     Which password do you have to use?
             **My Solution:** Password being used would be the more secure *'Cisco'* password.
 
-9. View the passwords in the running configuration.
+- [x] 9. View the passwords in the running configuration.
      What encryption type number is used for the encrypted 'enable password'?
             **My Solution:** Password encryption for *'enable password'* would be **Type 7**
      What encryption type number is used for the encrypted 'enable secret'?
             **My Solution:** Password encryption for *'enable secret'* would be **MD5**
 
-10. Save the running configuration to the startup configuration
+- [x] 10. Save the running configuration to the startup configuration
             **My Solution:** Using **write memory** to save running-config to startup-config.
 
 ## Synopsis
