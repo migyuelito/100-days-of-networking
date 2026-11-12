@@ -5,7 +5,7 @@ I work in IT helpdesk and I'm moving into network and network security engineeri
 **Miguel** · Salt Lake City · [LinkedIn](https://www.linkedin.com/in/migyuelito/) · [Email](mailto:migyuelito@outlook.com)
 
 > [!NOTE]
-> **Progress:** Day 1 of 100 · Phase {{PHASE}} · Last updated 2026-11-09
+> **Progress:** Day 4 of 100 · Phase 1 · Last updated 2026-11-12
 
 ## For reviewers
 
