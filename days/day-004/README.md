@@ -17,33 +17,42 @@
 
 ### Tasks
 
-1. Change the hostnames of the router and switch to the appropriate names (R1, SW1)
-     ##Use the 'hostname' command in global configuration mode##
+- [x] 1. Change the hostnames of the router and switch to the appropriate names (R1, SW1)
+            **My Solution:** Enter **configure terminal** and use the **hostname** command.
 
-2.  Configure an unencrypted enable password of 'CCNA' on both devices
+- [x] 2.  Configure an unencrypted enable password of 'CCNA' on both devices
+            **My Solution:** In **configure terminal** use the **enable password** command and enter *CCNA*
 
-3. Exit back to user EXEC mode and test the password
+- [x] 3. Exit back to user EXEC mode and test the password
 
-4.  View the password in the running configuration
+- [x] 4.  View the password in the running configuration
+            **My Solution:** Verified and confirmed password using **show running-config**
 
-5. Ensure that the current password, and all future passwords, are encrypted
+- [x] 5. Ensure that the current password, and all future passwords, are encrypted
+            **My Solution:** In **configure terminal** use the **service password-encryption** command to encrypt current and future passwords.
 
-6. View the password in the running configuration
+- [x] 6. View the password in the running configuration
 
 7. Configure a more secure, encrypted enable password of 'Cisco' on both devices
+            **My Solution:** In **configure terminal** use the **enable secret** command and enter *Cisco*
 
 8. Exit back to user EXEC mode and then return to privileged EXEC mode.
     Which password do you have to use?
+            **My Solution:** Password being used would be the more secure *'Cisco'* password.
 
 9. View the passwords in the running configuration.
      What encryption type number is used for the encrypted 'enable password'?
+            **My Solution:** Password encryption for *'enable password'* would be **Type 7**
      What encryption type number is used for the encrypted 'enable secret'?
+            **My Solution:** Password encryption for *'enable secret'* would be **MD5**
 
 10. Save the running configuration to the startup configuration
+            **My Solution:** Using **write memory** to save running-config to startup-config.
 
-## What happened and why
+## Synopsis
 
 Day 4 of Jeremy's IT Lab labs.
 
+First true day of getting into the command line. A lot of the information I already knew a lot of.
 
 **Previous:** [Day 003 · The TCP/IP Model](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-003/README.md) | **Next:** [Day 005 · Ethernet LAN Switching](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-005/README.md)
