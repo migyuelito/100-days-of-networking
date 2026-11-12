@@ -20,4 +20,4 @@
 Day 2 of Jeremy's IT Lab labs. Getting through most of the introductory lessons without a sweat. Mainly getting used to Github and how to contribute and add to repos.
 
 
-**Previous:** [Day 001 · Network Devices](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-001/README.md) | **Next:** Day 003 · **Intro to the CLI**
+**Previous:** [Day 001 · Network Devices](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-001/README.md) | **Next:** [Day 003 · The TCP/IP Model](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-003/README.md)

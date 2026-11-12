@@ -26,4 +26,4 @@ Day 3 of Jeremy's IT Lab labs.
     2a. SW2 and SW1 receive the PDU. Save the MAC address of PC1 to its MAC address table under the associated port(s). Then forward the PDU to all other ports due to it being a broadcast.
 
 
-**Previous:** [Day 001 · Network Devices](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-001/README.md) | **Next:** Day 003 · **Intro to the CLI**
+**Previous:** [Day 002 · Interfaces and Cables](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-002/README.md) | **Next:** [Day 004 · Intro to the CLI](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-004/README.md)
