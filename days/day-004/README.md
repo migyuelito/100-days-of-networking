@@ -18,17 +18,21 @@
 ### Tasks
 
 - [x] 1. Change the hostnames of the router and switch to the appropriate names (R1, SW1)
+
             **My Solution:** Enter **configure terminal** and use the **hostname** command.
 
 - [x] 2.  Configure an unencrypted enable password of 'CCNA' on both devices
+
             **My Solution:** In **configure terminal** use the **enable password** command and enter *CCNA*
 
 - [x] 3. Exit back to user EXEC mode and test the password
 
 - [x] 4.  View the password in the running configuration
+
             **My Solution:** Verified and confirmed password using **show running-config**
 
 - [x] 5. Ensure that the current password, and all future passwords, are encrypted
+
             **My Solution:** In **configure terminal** use the **service password-encryption** command to encrypt current and future passwords.
 
 - [x] 6. View the password in the running configuration
