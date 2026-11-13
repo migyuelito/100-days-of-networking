@@ -2,10 +2,10 @@
 
 I work in IT helpdesk and I'm moving into network and network security engineering. This repo is 100 days of hands-on practice: I refresh CCNA skills by rebuilding and breaking guided labs, design my own scenarios, and finish with a campus network built in stages and tested against failures. Every result links to the evidence behind it.
 
-**Miguel** · Salt Lake City · [LinkedIn](https://www.linkedin.com/in/migyuelito/) · [Email](mailto:migyuelito@outlook.com)
+**Miguel** · United States · [LinkedIn](https://www.linkedin.com/in/migyuelito/) · [Email](mailto:migyuelito@outlook.com)
 
 > [!NOTE]
-> **Progress:** Day 1 of 100 · Phase {{PHASE}} · Last updated 2026-11-09
+> **Progress:** Day 4 of 100 · Phase 1 · Last updated 2026-11-12
 
 ## For reviewers
 
@@ -61,6 +61,10 @@ Pacing, scenario ideas, and the campus test plan: [docs/roadmap.md](docs/roadmap
 | Day | Date | Topic | Source | My work | Evidence |
 |---|---|---|---|---|---|
 | [001](days/day-001/README.md) | 2026-11-9 | Packet Tracer setup · the subnet boundary | Jeremy's IT Lab Day 1 + Day 1 Lab | **Guided** | [Files](days/day-001/evidence/) |
+| [002](days/day-002/README.md) | 2026-11-10 | Packet Tracer setup · the subnet boundary | Jeremy's IT Lab Day 2 + Day 2 Lab | **Guided** | [Files](days/day-002/evidence/) |
+| [003](days/day-003/README.md) | 2026-11-11 | Packet Tracer setup · the subnet boundary | Jeremy's IT Lab Day 3 + Day 3 Lab | **Guided** | [Files](days/day-003/evidence/) |
+| [004](days/day-004/README.md) | 2026-11-12 | Packet Tracer setup · the subnet boundary | Jeremy's IT Lab Day 4 + Day 4 Lab | **Guided** | [Files](days/day-004/evidence/) |
+| [005](days/day-005/README.md) | 2026-11-13 | Packet Tracer setup · the subnet boundary | Jeremy's IT Lab Day 5 + Day 5 Lab | **Guided** | [Files](days/day-005/evidence/) |
 
 ## Skills map
 
