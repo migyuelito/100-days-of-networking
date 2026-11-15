@@ -1,0 +1,36 @@
+SW1>en
+SW1#show mac-
+SW1#show mac-address-table 
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+
+   1    0001.647b.3119    DYNAMIC     Gig0/1
+   1    0004.9a6e.d870    DYNAMIC     Gig0/1
+   1    00d0.d3ad.9cab    DYNAMIC     Fa0/1
+SW1#show mac-address-table 
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+
+   1    0001.647b.3119    DYNAMIC     Gig0/1
+   1    0004.9a6e.d870    DYNAMIC     Gig0/1
+   1    0060.5c56.14d3    DYNAMIC     Fa0/2
+   1    00d0.d3ad.9cab    DYNAMIC     Fa0/1
+SW1#clear ma
+SW1#clear mac-
+SW1#clear mac-address-table dyna
+SW1#clear mac-address-table dynamic 
+SW1#show mac-address
+SW1#show mac-address-table 
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+
+SW1#
