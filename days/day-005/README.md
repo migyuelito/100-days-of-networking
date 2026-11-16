@@ -11,7 +11,7 @@
 
 | 📅 Date | ⏱️ Time spent | 📚 Source | 🛠️ Work type |
 |---|---|---|---|
-| {{YYYY-MM-DD}} | {{TIME}} | Jeremy's IT Lab, Free CCNA<br>Day 5 (Ethernet LAN Switching pt. 1)<br>Custom lab written with Claude (the course has no Day 5 lab)<br>▶️ [Playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | Guided |
+| 2026-11-13 | 18 min | Jeremy's IT Lab, Free CCNA<br>Day 5 (Ethernet LAN Switching pt. 1)<br>Custom lab written with Claude (the course has no Day 5 lab)<br>▶️ [Playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | Guided |
 
 </div>
 
