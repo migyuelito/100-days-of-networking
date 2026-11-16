@@ -132,147 +132,16 @@ PC addresses: Clickd on each individual PC and manually configured the IPv4 addr
 
 > Switch to Simulation mode and send one ping from PC3 to PC1. Step through the first frame until it leaves HUB1.
 
-🛠️ **In Packet Tracer:**
-1. Pick the **Inspect** tool (magnifying glass), click **SW1**, and choose **MAC Table**. Leave the window open; it updates live and should be empty.
-2. Click **Simulation** (bottom right). Click **Edit Filters** and leave only **ARP** and **ICMP** checked.
-3. Pick **Add Simple PDU** (closed envelope), click **PC3**, then **PC1**.
-4. Press **Capture/Forward** (▶|) one step at a time. Click an envelope to open it; the **OSI Model** tab shows which layers that device used.
-
-> [!TIP]
-> The first frame isn't the ping. It's PC3's **ARP request** (Day 6), a broadcast asking for PC1's MAC address.
-
 > [!NOTE]
 > **What did HUB1 do with the frame, and which OSI layer did it work at? (Check HUB1's OSI Model tab.)**
 >
-> ➜ {{your answer}}
+> ➜ HUB1 broadcasted the frame to all of its ports. Hubs work primarily within the Physical layer of the OSI Model.
 >
 > **Try the Inspect tool on HUB1. Does it have a MAC table? Why or why not?**
 >
-> ➜ {{your answer}}
-
-### Task 5 — Watch SW1 learn and flood
-
-> Keep stepping until the frame leaves SW1.
-
-> [!NOTE]
-> **What did SW1 add to its MAC table, and which ports did it send the frame out of?**
->
-> ➜ {{your answer}}
->
-> **Compare SW1's OSI Model tab with HUB1's. Which extra layer does the switch use, and what does it use it for?**
->
-> ➜ {{your answer}}
-
-### Task 6 — Follow the reply back through the hub
-
-> Step through PC1's ARP reply and the ping (ICMP echo request and reply) until the ping completes.
-
-> [!NOTE]
-> **SW1 sent PC1's reply out only one port, yet PC4 still received it. Why?**
->
-> ➜ {{your answer}}
->
-> **Did PC2 receive the ICMP echo request? Why or why not?**
->
-> ➜ {{your answer}}
+> ➜ Hubs do not have a MAC table as they are not smart devices and only broadcast out traffic.
 
 ## 🔍 Part 3 — Anatomy of an Ethernet Frame
-
-### Task 7 — Read the Ethernet frame
-
-> In the **Event List**, click the first ARP event at PC3, then the first ICMP event at PC3. On **Outbound PDU Details**, find the **Ethernet II** header and fill in the table.
-
-| Field | ARP frame | ICMP frame |
-|:--|:--|:--|
-| Destination MAC | {{ }} | {{ }} |
-| Source MAC | {{ }} | {{ }} |
-| Type | {{ }} | {{ }} |
-
-> [!NOTE]
-> **What do the two Type values tell the receiver?**
->
-> ➜ {{your answer}}
->
-> **An ARP message is 28 bytes, but an Ethernet payload must be at least 46 bytes. How many bytes of padding does the ARP frame need, and how big is the whole frame (header + payload + trailer)?**
->
-> ➜ {{your answer}}
-
-## 🔗 Part 4 — Many MACs, One Port
-
-### Task 8 — Find the port with two MAC addresses
-
-> Switch back to **Realtime** mode, ping PC2 from PC4, then check SW1's MAC table in the CLI. Copy the output into `evidence/03-sw1-mac-table.txt`.
-
-```
-C:\> ping 192.168.5.2                ← from PC4's Command Prompt
-SW1# show mac address-table
-```
-
-> [!NOTE]
-> **How many MAC addresses does SW1 list on F0/3, and why can one switch port have more than one?**
->
-> ➜ {{your answer}}
-
-## 🌊 Part 5 — Unknown Unicast Flooding
-
-### Task 9 — Flood an unknown unicast frame
-
-> Empty SW1's MAC table while PC1 still remembers PC4's MAC address, then ping PC4 from PC1 in Simulation mode.
-
-🛠️ Do these three steps back to back:
-1. In **Realtime** mode, ping PC4 from PC1: `ping 192.168.5.4`. This refreshes PC1's memory of PC4's MAC address.
-2. On SW1, clear the learned addresses: `SW1# clear mac address-table dynamic`
-3. Switch to **Simulation**, send a **Simple PDU** from PC1 to PC4, and step through it.
-
-If an ARP request shows up first, PC1 had already forgotten PC4's MAC address. Repeat the three steps a little faster.
-
-> [!NOTE]
-> **There's no ARP request this time. Why not?**
->
-> ➜ {{your answer}}
->
-> **What does SW1 do with the echo request, and why? Which PCs receive a copy?**
->
-> ➜ {{your answer}}
->
-> **How is this flood different from the ARP broadcast in Task 5?**
->
-> ➜ {{your answer}}
-
-## ⏳ Bonus — MAC Aging
-
-### Task 10 — Bonus: let the MAC table age out
-
-> In Realtime mode, ping between a few PCs, leave everything idle for at least 5 minutes, then run `show mac address-table` on SW1 again. Copy the output into `evidence/05-sw1-mac-table-aged.txt`.
-
-> [!NOTE]
-> **What happened to the entries, and why?**
->
-> ➜ {{your answer}}
-
-## 🧪 Tests
-
-<!-- Write each Expected before you run the test. Start each Actual with ✅ (matched) or ❌ (didn't match). -->
-
-| Test | Expected | Actual | Evidence |
-|:--|:--|:--|:--|
-| T1 · Where HUB1 and SW1 send PC3's ARP request | {{your prediction}} | {{ }} | [01](evidence/01-arp-request-hub-and-switch.png) |
-| T2 · Which PCs receive PC1's reply to PC3 | {{your prediction}} | {{ }} | [02](evidence/02-reply-through-hub.png) |
-| T3 · SW1's MAC table after PC4 pings PC2 | {{your prediction}} | {{ }} | [03](evidence/03-sw1-mac-table.txt) |
-| T4 · Where SW1 sends PC1's echo request after its table is cleared | {{your prediction}} | {{ }} | [04](evidence/04-unknown-unicast-flood.png) |
-| T5 · SW1's MAC table after 5 minutes idle (bonus) | {{your prediction}} | {{ }} | [05](evidence/05-sw1-mac-table-aged.txt) |
-
-## 📁 Evidence
-
-<!-- Save screenshots and CLI output in evidence/ with these names so the links work. -->
-
-| # | File | What it shows |
-|:--:|:--|:--|
-| 01 | [01-arp-request-hub-and-switch.png](evidence/01-arp-request-hub-and-switch.png) | Simulation: HUB1 repeats PC3's ARP request and SW1 floods it |
-| 02 | [02-reply-through-hub.png](evidence/02-reply-through-hub.png) | Simulation: PC1's reply reaches PC4 through the hub |
-| 03 | [03-sw1-mac-table.txt](evidence/03-sw1-mac-table.txt) | `show mac address-table`: two MAC addresses on F0/3 |
-| 04 | [04-unknown-unicast-flood.png](evidence/04-unknown-unicast-flood.png) | Simulation: SW1 floods an unknown unicast frame |
-| 05 | [05-sw1-mac-table-aged.txt](evidence/05-sw1-mac-table-aged.txt) | `show mac address-table` after 5 minutes idle (bonus) |
 
 ## 🧠 Key Takeaways
 
@@ -304,19 +173,17 @@ If an ARP request shows up first, PC1 had already forgotten PC4's MAC address. R
 
 | Command or tool | Where | What it does |
 |:--|:--|:--|
-| `enable secret LabOnly-NotReal1` | Global config | Sets a hashed enable password (Day 4) |
+| `enable secret Cisco1` | Global config | Sets a hashed enable password (Day 4) |
 | `write memory` | Privileged EXEC | Saves the running config (Day 4) |
 | `ipconfig /all` | PC → Command Prompt | Shows the PC's MAC address |
 | `ping 192.168.5.4` | PC → Command Prompt | Sends ICMP echo requests |
 | `show mac address-table` | Switch, privileged EXEC | Lists learned MACs and their ports |
-| `clear mac address-table dynamic` | Switch, privileged EXEC | Removes all dynamically learned MACs |
-| **Inspect** → **MAC Table** | Packet Tracer toolbar | Live view of a switch's MAC table |
-| **Add Simple PDU** | Packet Tracer toolbar | Sends one ping between two devices |
-| **Capture/Forward** | Simulation panel | Steps the simulation forward |
 
 ## 📝 Synopsis
 
-{{2–4 sentences in your own words. The "why" is the part interviews ask about.}}
+Lab provided by Claude AI.
+
+This was a short lab prompted by Claude AI to address the missing Day 5 lab day. Not really a test of knowledge when it comes to networking and everything I know so far. This is definitely a test of Claude's potential at creating meaningful labs in the future. For right now, some definite tweaking is needed.
 
 ---
 
