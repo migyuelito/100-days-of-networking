@@ -16,7 +16,7 @@
 I work in IT helpdesk and I'm moving into network and network security engineering. This repo is 100 days of hands-on practice: I refresh CCNA skills by rebuilding and breaking guided labs, design my own scenarios, and finish with a campus network built in stages and tested against failures. Every result links to the evidence behind it.
 
 > [!NOTE]
-> **Progress:** Day 4 of 100 · Phase 1 · Last updated 2026-11-12
+> **Progress:** Day 7 of 100 · Phase 1 · Last updated 2026-11-15
 
 ## 👀 For Reviewers
 
@@ -82,7 +82,7 @@ Pacing, scenario ideas, and the campus test plan: [docs/roadmap.md](docs/roadmap
 | [**002**](days/day-002/README.md) | 2026-11-10 | Interfaces and cables | Jeremy's IT Lab<br>Day 2 + Day 2 Lab | 📘 **Guided** | 📁 [Files](days/day-002/evidence/) |
 | [**003**](days/day-003/README.md) | 2026-11-11 | The TCP/IP model | Jeremy's IT Lab<br>Day 3 + Day 3 Lab | 📘 **Guided** | 📁 [Files](days/day-003/evidence/) |
 | [**004**](days/day-004/README.md) | 2026-11-12 | Intro to the CLI | Jeremy's IT Lab<br>Day 4 + Day 4 Lab | 📘 **Guided** | 📁 [Files](days/day-004/evidence/) |
-| [**005**](days/day-005/README.md) | — | Ethernet LAN switching, part 1 | Jeremy's IT Lab<br>Day 5 + custom lab | 🗓️ Planned | 📁 [Files](days/day-005/evidence/) |
+| [**005**](days/day-005/README.md) | 2026-11-13 | Ethernet LAN switching, part 1 | Jeremy's IT Lab<br>Day 5 + custom lab | 💡 **Original** | 📁 [Files](days/day-005/evidence/) |
 | [**006**](days/day-006/README.md) | 2026-11-14 | Ethernet LAN switching, part 2 | Jeremy's IT Lab<br>Day 6 + Day 6 Lab | 📘 **Guided** | 📁 [Files](days/day-006/evidence/) |
 
 ## 🧠 Skills Map
