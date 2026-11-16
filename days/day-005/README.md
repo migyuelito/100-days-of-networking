@@ -122,10 +122,10 @@ SW1# write memory
 
 | PC | MAC address | OUI (first 6 hex digits) |
 |:--|:--|:--|
-| PC1 | {{ }} | {{ }} |
-| PC2 | {{ }} | {{ }} |
-| PC3 | {{ }} | {{ }} |
-| PC4 | {{ }} | {{ }} |
+| PC1 | 00D0.58A1.5E10 | 00D0.58 |
+| PC2 | 00D0.D35A.A031 | 00D0.D3 |
+| PC3 | 0090.0C11.A512 | 0090.0C |
+| PC4 | 0090.2BB5.9D79 | 0090.2B |
 
 > [!NOTE]
 > **What does the OUI identify, and how would Windows write PC1's MAC address (`xx-xx-xx-xx-xx-xx`)?**
