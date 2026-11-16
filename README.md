@@ -16,7 +16,7 @@
 I work in IT helpdesk and I'm moving into network and network security engineering. This repo is 100 days of hands-on practice: I refresh CCNA skills by rebuilding and breaking guided labs, design my own scenarios, and finish with a campus network built in stages and tested against failures. Every result links to the evidence behind it.
 
 > [!NOTE]
-> **Progress:** Day 7 of 100 · Phase 1 · Last updated 2026-11-15
+> **Progress:** Day 8 of 100 · Phase 1 · Last updated 2026-11-16
 
 ## 👀 For Reviewers
 
@@ -84,6 +84,7 @@ Pacing, scenario ideas, and the campus test plan: [docs/roadmap.md](docs/roadmap
 | [**004**](days/day-004/README.md) | 2026-11-12 | Intro to the CLI | Jeremy's IT Lab<br>Day 4 + Day 4 Lab | 📘 **Guided** | 📁 [Files](days/day-004/evidence/) |
 | [**005**](days/day-005/README.md) | 2026-11-13 | Ethernet LAN switching, part 1 | Jeremy's IT Lab<br>Day 5 + custom lab | 💡 **Original** | 📁 [Files](days/day-005/evidence/) |
 | [**006**](days/day-006/README.md) | 2026-11-14 | Ethernet LAN switching, part 2 | Jeremy's IT Lab<br>Day 6 + Day 6 Lab | 📘 **Guided** | 📁 [Files](days/day-006/evidence/) |
+| [**007**](days/day-007/README.md) | 2026-11-15 | IPv4 addressing, part 1 | Jeremy's IT Lab<br>Day 7 + custom lab | 💡 **Original** | 📁 [Files](days/day-007/evidence/) |
 
 ## 🧠 Skills Map
 
