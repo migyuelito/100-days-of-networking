@@ -67,9 +67,9 @@ flowchart LR
 
 ## ✅ Lab Tasks
 
-- [ ] [**Task 1**](#task-1--build-and-cable-the-topology) — Build and cable the topology
-- [ ] [**Task 2**](#task-2--configure-sw1-and-address-the-pcs) — Configure SW1 the Day 4 way and address the PCs
-- [ ] [**Task 3**](#task-3--record-each-pcs-mac-address) — Record each PC's MAC address
+- [x] [**Task 1**](#task-1--build-and-cable-the-topology) — Build and cable the topology
+- [x] [**Task 2**](#task-2--configure-sw1-and-address-the-pcs) — Configure SW1 the Day 4 way and address the PCs
+- [x] [**Task 3**](#task-3--record-each-pcs-mac-address) — Record each PC's MAC address
 - [ ] [**Task 4**](#task-4--send-a-frame-through-the-hub) — Send a frame through the hub
 - [ ] [**Task 5**](#task-5--watch-sw1-learn-and-flood) — Watch SW1 learn and flood
 - [ ] [**Task 6**](#task-6--follow-the-reply-back-through-the-hub) — Follow the reply back through the hub
@@ -82,37 +82,33 @@ flowchart LR
 
 ### Task 1 — Build and cable the topology
 
-> Add one **2960** switch, one **hub**, and four **PC-PT** PCs, rename them to match the topology, and cable them as shown.
+> Recreate the topology provided by Claude in Packet Tracer.
 
-🛠️ **In Packet Tracer:**
-- **Switch:** Network Devices → Switches → **2960**. **Hub:** Network Devices → Hubs → **Hub-PT**. **PCs:** End Devices → **PC**.
-- **Rename:** click a device → **Config** → **Display Name**.
-- **Cables:** Connections → **Copper Straight-Through** for the PCs, **Copper Cross-Over** from SW1 F0/3 to the hub.
-- Wait for SW1's link lights to turn green (about 30 seconds; that delay is Spanning Tree, a later topic).
-
-💡 **My solution:** {{ }}
+💡 **My solution:** Added one 2960 switch, one hub, and four PC's, renamed them to match the topology and cabled them appropriately.
 
 > [!NOTE]
-> **Why does SW1 connect to the hub with a crossover cable?**
->
-> ➜ {{your answer}}
+> ➜ The connection from SW1 to HUB1 requires a crossover cable due to both devices transmitting using pins 3-6.
 
 ### Task 2 — Configure SW1 and address the PCs
 
-> Set SW1's hostname, protect privileged EXEC mode with an `enable secret`, and save the configuration. Then give each PC its address from the table (no default gateway).
+> Set the switch's hostname, protect privileged EXEC mode, and save the configuration. Then provide each PC its address from the table (no default gateway).
 
+💡 **My Commands:**
 ```
-Switch> enable
-Switch# configure terminal
-Switch(config)# hostname SW1
-SW1(config)# enable secret LabOnly-NotReal1
-SW1(config)# end
-SW1# write memory
+Switch>
+Switch>en
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW1
+SW1(config)#enable secret Cisco1
+SW1(config)#do write memory
+Building configuration...
+[OK]
+SW1(config)#
 ```
 
-🛠️ **PC addresses:** click the PC → **Desktop** → **IP Configuration** → **Static**.
-
-💡 **My solution:** {{ }}
+💡 **My Solution:**
+PC addresses: Clickd on each individual PC and manually configured the IPv4 address and subnet.
 
 ### Task 3 — Record each PC's MAC address
 
@@ -128,9 +124,7 @@ SW1# write memory
 | PC4 | 0090.2BB5.9D79 | 0090.2B |
 
 > [!NOTE]
-> **What does the OUI identify, and how would Windows write PC1's MAC address (`xx-xx-xx-xx-xx-xx`)?**
->
-> ➜ {{your answer}}
+> ➜ The OUI identifies the manufacturers or vendor of the NIC of the device.
 
 ## ⚖️ Part 2 — Switch vs. Hub
 
