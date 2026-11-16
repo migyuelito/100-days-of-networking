@@ -85,6 +85,7 @@ Pacing, scenario ideas, and the campus test plan: [docs/roadmap.md](docs/roadmap
 | [**005**](days/day-005/README.md) | 2026-11-13 | Ethernet LAN switching, part 1 | Jeremy's IT Lab<br>Day 5 + custom lab | 💡 **Original** | 📁 [Files](days/day-005/evidence/) |
 | [**006**](days/day-006/README.md) | 2026-11-14 | Ethernet LAN switching, part 2 | Jeremy's IT Lab<br>Day 6 + Day 6 Lab | 📘 **Guided** | 📁 [Files](days/day-006/evidence/) |
 | [**007**](days/day-007/README.md) | 2026-11-15 | IPv4 addressing, part 1 | Jeremy's IT Lab<br>Day 7 + custom lab | 💡 **Original** | 📁 [Files](days/day-007/evidence/) |
+| [**008**](days/day-008/README.md) | 2026-11-16 | IPv4 addressing, part 2 | Jeremy's IT Lab<br>Day 8 + Day 8 Lab | 📘 **Guided** | 📁 [Files](days/day-008/evidence/) |
 
 ## 🧠 Skills Map
 

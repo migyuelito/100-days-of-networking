@@ -281,7 +281,7 @@ PC4     ________ . ________ . ________ . ________
 
 <div align="center">
 
-⬅️ **Previous:** [Day 006 · Ethernet LAN Switching, Part 2](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-006/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** Day 008 · IPv4 Addressing, Part 2 ➡️
+⬅️ **Previous:** [Day 006 · Ethernet LAN Switching, Part 2](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-006/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** [Day 008 · IPv4 Addressing, Part 2](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-008/README.md) ➡️
 
 **[⬆ Back to top](#readme-top)**
 
