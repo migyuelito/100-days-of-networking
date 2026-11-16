@@ -22,7 +22,7 @@
 
 ## 📋 What I Did
 
-- [ ] **Guided:** Built the custom Day 5 lab in Packet Tracer and worked through its tasks in Simulation mode.
+- [x] **Guided:** Built the custom Day 5 lab in Packet Tracer and worked through its tasks in Simulation mode.
 
 ## 🗺️ Topology
 
@@ -70,13 +70,7 @@ flowchart LR
 - [x] [**Task 1**](#task-1--build-and-cable-the-topology) — Build and cable the topology
 - [x] [**Task 2**](#task-2--configure-sw1-and-address-the-pcs) — Configure SW1 the Day 4 way and address the PCs
 - [x] [**Task 3**](#task-3--record-each-pcs-mac-address) — Record each PC's MAC address
-- [ ] [**Task 4**](#task-4--send-a-frame-through-the-hub) — Send a frame through the hub
-- [ ] [**Task 5**](#task-5--watch-sw1-learn-and-flood) — Watch SW1 learn and flood
-- [ ] [**Task 6**](#task-6--follow-the-reply-back-through-the-hub) — Follow the reply back through the hub
-- [ ] [**Task 7**](#task-7--read-the-ethernet-frame) — Read the fields of an Ethernet frame
-- [ ] [**Task 8**](#task-8--find-the-port-with-two-mac-addresses) — Find the switch port with two MAC addresses
-- [ ] [**Task 9**](#task-9--flood-an-unknown-unicast-frame) — Clear SW1's MAC table and flood an unknown unicast frame
-- [ ] [**Task 10**](#task-10--bonus-let-the-mac-table-age-out) — Bonus: let the MAC table age out
+- [x] [**Task 4**](#task-4--send-a-frame-through-the-hub) — Send a frame through the hub
 
 ## 🔌 Part 1 — Build the LAN
 
@@ -181,9 +175,10 @@ PC addresses: Clickd on each individual PC and manually configured the IPv4 addr
 
 ## 📝 Synopsis
 
-Lab provided by Claude AI.
+***Lab provided by Claude AI.***
 
-This was a short lab prompted by Claude AI to address the missing Day 5 lab day. Not really a test of knowledge when it comes to networking and everything I know so far. This is definitely a test of Claude's potential at creating meaningful labs in the future. For right now, some definite tweaking is needed.
+> [!NOTE]
+> ➜ This was a short lab prompted by Claude AI to address the missing Day 5 lab day. Not really a test of knowledge when it comes to networking and everything I know so far. This is definitely a test of Claude's potential at creating meaningful labs in the future. For right now, some definite tweaking is needed.
 
 ---
 
