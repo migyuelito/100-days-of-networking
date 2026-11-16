@@ -39,7 +39,7 @@ I follow the lecture and guided lab, then rebuild, change, and test the work on 
 
 | Source | What I used it for | Link |
 |:--|:--|:--|
-| Day 5 lab, written with Claude (Anthropic's AI assistant) | Lab tasks and questions for Day 5, which has no course lab | [Day 005](days/day-005/README.md) |
+| Day 5 and Day 7 labs, written with Claude (Anthropic's AI assistant) | Lab tasks and questions for Days 5 and 7, which have no course lab | [Day 005](days/day-005/README.md) · [Day 007](days/day-007/README.md) |
 
 ## ⚖️ Trademarks
 

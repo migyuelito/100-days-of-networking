@@ -194,7 +194,7 @@ Getting more hands-on with the CLI. A lot of the information I already knew.
 
 <div align="center">
 
-⬅️ **Previous:** [Day 005 · Ethernet LAN Switching, Part 1](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-005/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** Day 007 · IPv4 Addressing, Part 1 ➡️
+⬅️ **Previous:** [Day 005 · Ethernet LAN Switching, Part 1](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-005/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** [Day 007 · IPv4 Addressing, Part 1](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-007/README.md) ➡️
 
 **[⬆ Back to top](#readme-top)**
 
