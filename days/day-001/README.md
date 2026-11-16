@@ -15,14 +15,12 @@
 
 </div>
 
-<!-- Aim for 10 minutes of writing. Copy this file to days/day-NNN/README.md. -->
-
 > 🎯 **Goal:** Set up Packet Tracer, rebuild the Day 1 topology from memory.
 
 ## 📋 What I Did
 
-- [x] **Guided:** Followed lab instructions of recreating network diagram
-- [x] **Rebuilt** the topology from a blank file, without the video instruction → `day-001-rebuild.pkt`
+- [x] **Guided:** Followed lab instructions of recreating network diagram.
+- [x] **Rebuilt** the topology from a blank file, without the video instruction.
 
 ## 🗺️ Topology
 
@@ -42,12 +40,14 @@
 | 🗄️ Server | 2 | An end host that provides services to clients |
 
 > [!TIP]
-> The two sites place the firewall differently: the left site puts it **in front of** the router, and the right site puts it **behind** the router.
+> The two sites place the firewall differently: the left site puts it **in front of** the router, and the right site puts it **behind** the router. Each of these firewall placements fulfill different needs for each network.
 
-## 💡 What Happened and Why
+## 📝 Synopsis
 
-Limited testing and configuration for this specific day, as it is used as a general start and introduction to Packet Tracer and the many networking symbols and connections.
+***Lab provided by Jeremy's IT Lab (Day 1).***
 
+> [!NOTE]
+> ➜ Limited testing and configuration for this specific day, as it is used as a general start and introduction to Packet Tracer and the many networking symbols and connections..
 ---
 
 <div align="center">
