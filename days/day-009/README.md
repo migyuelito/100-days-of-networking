@@ -11,7 +11,7 @@
 ## What I did
 
 - [ ] Guided: followed the Day 1 Lab
-- [ ] Rebuilt the topology from a blank file, without the video → `day-001-rebuild.pkt`
+- [ ] Rebuilt the topology from a blank file, without the video
 - [ ] Changed a requirement: PC3 on its own subnet (192.168.2.0/24), same switch
 - [ ] Planted and diagnosed a fault: PC2's mask set to 255.255.0.0
 
