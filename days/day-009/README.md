@@ -1,10 +1,10 @@
-# Day 001 — Packet Tracer setup and the subnet boundary
+# Day 009 — Packet Tracer setup and the subnet boundary
 
 <!-- Pre-drafted plan. Fill in every {{ }} with what you actually did and saw, tick the boxes you completed, and delete lines you didn't do. -->
 
 | Date | Time spent | Source | Work type |
 |---|---|---|---|
-| {{YYYY-MM-DD}} | {{TIME}} | Jeremy's IT Lab, Free CCNA: Day 1 (Network Devices) and Day 1 Lab (Packet Tracer Introduction) — [playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | {{Guided · Rebuilt · Changed · Diagnosed}} |
+| 2026-11-18 | 15 min | Jeremy's IT Lab, Free CCNA: Day 1 (Network Devices) and Day 1 Lab (Packet Tracer Introduction) — [playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | {{Guided · Rebuilt · Changed · Diagnosed}} |
 
 **Goal:** Set up Packet Tracer, rebuild the Day 1 topology from memory, and prove where a subnet boundary stops traffic, even on a single switch.
 
