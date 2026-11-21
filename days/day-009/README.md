@@ -94,10 +94,275 @@ R1(config-if)#
 
 ### Task 3
 
-### Task 4
+> Configure Router's speed and duplex
+```
+R1#en
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int g0/0
+R1(config-if)#speed 1000
+R1(config-if)#duplex full
+R1(config-if)#
+```
 
-### Task 5
+> Configure Switch 1 speed and duplex
+```
+SW1#en
+SW1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#int g0/1
+SW1(config-if)#exit
+SW1(config)#int range g0/1 - 2
+SW1(config-if-range)#speed 1000
+SW1(config-if-range)#duplex full
+SW1(config-if-range)#int range f0/1 - 2
+SW1(config-if-range)#speed 1000
+                              ^
+% Invalid input detected at '^' marker.
+	
+SW1(config-if-range)#speed 100
+SW1(config-if-range)#duplex ?
+  auto  Enable AUTO duplex configuration
+  full  Force full duplex operation
+  half  Force half-duplex operation
+SW1(config-if-range)#duplex full
+SW1(config-if-range)#
+```
 
+> Configure Switch 2 speed and duplex
+```
+SW2>en
+SW2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW2(config)#int g0/1
+SW2(config-if)#speed 1000
+SW2(config-if)#duplex full
+SW2(config-if)#int range f0/1 - 2
+SW2(config-if-range)#speed 100
+SW2(config-if-range)#duplex half
+SW2(config-if-range)#
+```
+### Task 4 - Configure descriptions
+
+> Router interface
+```
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int g0/0
+R1(config-if)#description ## To Switch 1 ##
+R1(config-if)#
+```
+
+> Switch 1 interface
+```
+SW1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#int g0/1
+SW1(config-if)#desc ## To Router 1 ##
+SW1(config-if)#int g0/2
+SW1(config-if)#desc ## To Switch 2 ##
+SW1(config-if)#
+```
+
+> Switch 2 interface
+```
+SW2#
+%SYS-5-CONFIG_I: Configured from console by console
+
+SW2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW2(config)#int g0/1
+SW2(config-if)#desc ## To Switch 1 ##
+SW2(config-if)#
+```
+
+### Task 5 - Disable non-connected interfaces
+
+> Router 1 Interfaces
+```
+R1#
+R1#sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     172.16.255.254  YES manual up                    up 
+GigabitEthernet0/1     unassigned      YES unset  administratively down down 
+GigabitEthernet0/2     unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+R1#
+```
+> [!Note] Router 1 had already disabled interfaces.
+
+> Switch 1 Interfaces
+```
+SW1>en
+SW1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#do show ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/1        unassigned      YES manual up                    up 
+FastEthernet0/2        unassigned      YES manual up                    up 
+FastEthernet0/3        unassigned      YES manual down                  down 
+FastEthernet0/4        unassigned      YES manual down                  down 
+FastEthernet0/5        unassigned      YES manual down                  down 
+FastEthernet0/6        unassigned      YES manual down                  down 
+FastEthernet0/7        unassigned      YES manual down                  down 
+FastEthernet0/8        unassigned      YES manual down                  down 
+FastEthernet0/9        unassigned      YES manual down                  down 
+FastEthernet0/10       unassigned      YES manual down                  down 
+FastEthernet0/11       unassigned      YES manual down                  down 
+FastEthernet0/12       unassigned      YES manual down                  down 
+FastEthernet0/13       unassigned      YES manual down                  down 
+FastEthernet0/14       unassigned      YES manual down                  down 
+FastEthernet0/15       unassigned      YES manual down                  down 
+FastEthernet0/16       unassigned      YES manual down                  down 
+FastEthernet0/17       unassigned      YES manual down                  down 
+FastEthernet0/18       unassigned      YES manual down                  down 
+FastEthernet0/19       unassigned      YES manual down                  down 
+FastEthernet0/20       unassigned      YES manual down                  down 
+FastEthernet0/21       unassigned      YES manual down                  down 
+FastEthernet0/22       unassigned      YES manual down                  down 
+FastEthernet0/23       unassigned      YES manual down                  down 
+FastEthernet0/24       unassigned      YES manual down                  down 
+GigabitEthernet0/1     unassigned      YES manual up                    up 
+GigabitEthernet0/2     unassigned      YES manual up                    up 
+Vlan1                  unassigned      YES manual administratively down down
+SW1(config)#int range f0/3 - 24
+SW1(config-if-range)#shutdown
+
+%LINK-5-CHANGED: Interface FastEthernet0/3, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/4, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/5, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/6, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/7, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/8, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/9, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/10, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/11, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/12, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/13, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/14, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/15, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/16, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/17, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/18, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/19, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/20, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/21, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/22, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/23, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/24, changed state to administratively down
+SW1(config-if-range)#desc ## Unused Port ##
+SW1(config-if-range)#
+```
+
+> Switch 2 Interfaces
+```
+SW2#
+SW2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW2(config)#do show ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/1        unassigned      YES manual up                    up 
+FastEthernet0/2        unassigned      YES manual up                    up 
+FastEthernet0/3        unassigned      YES manual down                  down 
+FastEthernet0/4        unassigned      YES manual down                  down 
+FastEthernet0/5        unassigned      YES manual down                  down 
+FastEthernet0/6        unassigned      YES manual down                  down 
+FastEthernet0/7        unassigned      YES manual down                  down 
+FastEthernet0/8        unassigned      YES manual down                  down 
+FastEthernet0/9        unassigned      YES manual down                  down 
+FastEthernet0/10       unassigned      YES manual down                  down 
+FastEthernet0/11       unassigned      YES manual down                  down 
+FastEthernet0/12       unassigned      YES manual down                  down 
+FastEthernet0/13       unassigned      YES manual down                  down 
+FastEthernet0/14       unassigned      YES manual down                  down 
+FastEthernet0/15       unassigned      YES manual down                  down 
+FastEthernet0/16       unassigned      YES manual down                  down 
+FastEthernet0/17       unassigned      YES manual down                  down 
+FastEthernet0/18       unassigned      YES manual down                  down 
+FastEthernet0/19       unassigned      YES manual down                  down 
+FastEthernet0/20       unassigned      YES manual down                  down 
+FastEthernet0/21       unassigned      YES manual down                  down 
+FastEthernet0/22       unassigned      YES manual down                  down 
+FastEthernet0/23       unassigned      YES manual down                  down 
+FastEthernet0/24       unassigned      YES manual down                  down 
+GigabitEthernet0/1     unassigned      YES manual up                    up 
+GigabitEthernet0/2     unassigned      YES manual down                  down 
+Vlan1                  unassigned      YES manual administratively down down
+SW2(config)#int range f0/3 - 24
+SW2(config-if-range)#shutdown
+
+%LINK-5-CHANGED: Interface FastEthernet0/3, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/4, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/5, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/6, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/7, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/8, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/9, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/10, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/11, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/12, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/13, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/14, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/15, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/16, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/17, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/18, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/19, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/20, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/21, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/22, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/23, changed state to administratively down
+
+%LINK-5-CHANGED: Interface FastEthernet0/24, changed state to administratively down
+SW2(config-if-range)#desc ## Unused Port ##
+SW2(config-if-range)#int g0/2
+SW2(config-if)#shutdown
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
+SW2(config-if)#desc ## Unused Port ##
+SW2(config-if)#
+```
 ## What happened and why
 
 {{2–4 sentences. Cover why one switch can't connect two subnets on its own, why the mask fault passed T3, and what Simulation mode showed for T4.}}
