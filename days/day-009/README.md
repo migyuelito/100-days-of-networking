@@ -107,30 +107,11 @@ R1(config-if)# duplex full
 SW1(config)# int range g0/1 - 2
 SW1(config-if-range)# speed 1000
 SW1(config-if-range)# duplex full
-SW1(config-if-range)# int range f0/1 - 2
-SW1(config-if-range)# speed 1000
-                               ^
-% Invalid input detected at '^' marker.
-SW1(config-if-range)# speed 100
-SW1(config-if-range)# duplex ?
-  auto  Enable AUTO duplex configuration
-  full  Force full duplex operation
-  half  Force half-duplex operation
-SW1(config-if-range)# duplex full
 
 SW2(config)# int g0/1
 SW2(config-if)# speed 1000
 SW2(config-if)# duplex full
-SW2(config-if)# int range f0/1 - 2
-SW2(config-if-range)# speed 100
-SW2(config-if-range)# duplex half
 ```
-
-> [!TIP]
-> `speed 1000` failed on F0/1–F0/2 because FastEthernet ports top out at 100 Mbps, so 1000 isn't an option there. `duplex ?` lists the choices before you commit to one.
-
-> [!WARNING]
-> F0/1 and F0/2 face PCs, and PCs default to auto. Hard-setting both speed and duplex turns autonegotiation off on those switch ports, so each PC senses 100 Mbps and falls back to half duplex. That matches SW2's `duplex half`, but not SW1's `duplex full`: a duplex mismatch on PC1's and PC2's links. Packet Tracer kept the links up; real hardware would show collisions and errors. It's a good reason to leave end-host ports on auto, as the lab does.
 
 ### Task 4 — Configure descriptions
 
