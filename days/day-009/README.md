@@ -44,4 +44,4 @@ No default gateways yet; there's no router in this design.
 - `ipconfig` — check it against the addressing plan before trusting a ping
 - Simulation mode — shows where a packet stops and why
 
-**Next:** Day 002 · **Re-run from memory on:** Day {{NNN}}
+**Next:** Day 010 · **Re-run from memory on:** Day 008
