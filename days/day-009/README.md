@@ -244,8 +244,6 @@ How that played out on this lab's links:
 |:--|:--|:--|:--|
 | R1 G0/0 ↔ SW1 G0/1 | 1000/full | 1000/full | ✅ Match |
 | SW1 G0/2 ↔ SW2 G0/1 | 1000/full | 1000/full | ✅ Match |
-| SW1 F0/1–F0/2 ↔ PC1, PC2 | 100/full | Auto → 100/half | ⚠️ Duplex mismatch |
-| SW2 F0/1–F0/2 ↔ PC3, PC4 | 100/half | Auto → 100/half | ✅ Match |
 
 ### Interface states
 
