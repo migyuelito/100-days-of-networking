@@ -1,12 +1,10 @@
-# Day 009 — Packet Tracer setup and the subnet boundary
-
-<!-- Pre-drafted plan. Fill in every {{ }} with what you actually did and saw, tick the boxes you completed, and delete lines you didn't do. -->
+# Day 009 — Switch Interfaces
 
 | Date | Time spent | Source | Work type |
 |---|---|---|---|
-| 2026-11-18 | 15 min | Jeremy's IT Lab, Free CCNA: Day 1 (Network Devices) and Day 1 Lab (Packet Tracer Introduction) — [playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | {{Guided · Rebuilt · Changed · Diagnosed}} |
+| 2026-11-21 | 15 min | Jeremy's IT Lab, Free CCNA: Day 9 (Switch Interfaces) and Day 9 Lab (Configuring Interfaces) — [playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | Guided |
 
-**Goal:** Set up Packet Tracer, rebuild the Day 1 topology from memory, and prove where a subnet boundary stops traffic, even on a single switch.
+**Goal:** Set up Packet Tracer, rebuild the Day 1 topology from memory, and prove where a subnet boundary stops traffic, even on a single switch.21
 
 ## What I did
 
@@ -15,9 +13,9 @@
 - [ ] Changed a requirement: PC3 on its own subnet (192.168.2.0/24), same switch
 - [ ] Planted and diagnosed a fault: PC2's mask set to 255.255.0.0
 
-## Addressing
+## Topology
 
-No default gateways yet; there's no router in this design.
+"evidence/009-topology.drawio.png"
 
 | Host | Address | Mask |
 |---|---|---|
@@ -25,15 +23,74 @@ No default gateways yet; there's no router in this design.
 | PC2 | 192.168.1.20 | 255.255.255.0 |
 | PC3 | 192.168.2.10 | 255.255.255.0 |
 
-## Tests
+## Lab Tasks
 
-| Test | Expected | Actual | Evidence |
-|---|---|---|---|
-| T1 · PC1 → PC2, same subnet | Replies (the first may time out while ARP resolves) | {{ACTUAL}} | [03](evidence/03-t1-ping-pc1-to-pc2.txt) |
-| T2 · PC1 → PC3, different subnet | No replies: PC1 sees 192.168.2.10 as remote and has no gateway to send it to | {{ACTUAL}} | [04](evidence/04-t2-ping-pc1-to-pc3.txt) |
-| T3 · Fault (PC2 at /16) · PC1 → PC2 | Still replies: each host still sees the other as local, so the fault hides | {{ACTUAL}} | [05](evidence/05-t3-ping-pc1-to-pc2-mask-fault.txt) |
-| T4 · Fault (PC2 at /16) · PC2 → PC3 | No replies: even if the request reaches PC3, PC3 sees PC2 as remote and has no gateway for the reply | {{ACTUAL}} | [06](evidence/06-t4-ping-pc2-to-pc3-mask-fault.txt) · [07](evidence/07-t4-simulation-mode.png) |
-| T5 · Fix · `ipconfig` on PC2 | Mask back to 255.255.255.0, matching the plan | {{ACTUAL}} | [08](evidence/08-t5-ipconfig-pc2-fixed.txt) |
+- [ ] 1. Configure the hostname of R1, SW1, and SW2
+
+- [ ] 2. Configure the appropriate IP addresses on R1, PC1, PC2, PC3, PC4
+
+- [ ] 3. Manually configure the speed and duplex on interfaces connected to other 
+    networking devices (not end hosts)
+
+- [ ] 4. Configure appropriate descriptions on each interface
+
+- [ ] 5. Disable interfaces which are not connected to other devices
+
+### Task 1 - Configure Networking Device Hostnames
+
+> Configure the routers hostname.
+```
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname R1
+R1(config)#
+```
+
+> Configure Switch 1 hostname.
+```
+Switch>en
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW1
+SW1(config)#
+```
+
+> Configure Switch 2 hostname.
+```
+Switch>en
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW2
+SW2(config)#
+```
+
+### Task 2 - Configure IP Addresses
+
+> Configure the routers IP address.
+```
+R1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int g0/0
+R1(config-if)#ip add 172.16.255.254 255.255.0.0
+R1(config-if)#no shutdown
+
+R1(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+```
+
+> Configure the PC1 - PC4 IP addresses.
+
+### Task 3
+
+### Task 4
+
+### Task 5
 
 ## What happened and why
 
