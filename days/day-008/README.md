@@ -290,7 +290,7 @@ IPv4 Addressing is probably my favorite part of the early learnings of Jeremy's 
 
 <div align="center">
 
-⬅️ **Previous:** [Day 007 · IPv4 Addressing, Part 1](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-007/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** Day 009 · Switch Interfaces ➡️
+⬅️ **Previous:** [Day 007 · IPv4 Addressing, Part 1](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-007/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** [Day 009 · Switch Interfaces](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-009/README.md) ➡️
 
 **[⬆ Back to top](#readme-top)**
 
