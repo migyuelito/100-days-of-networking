@@ -8,10 +8,7 @@
 
 ## What I did
 
-- [ ] Guided: followed the Day 1 Lab
-- [ ] Rebuilt the topology from a blank file, without the video
-- [ ] Changed a requirement: PC3 on its own subnet (192.168.2.0/24), same switch
-- [ ] Planted and diagnosed a fault: PC2's mask set to 255.255.0.0
+- [x] Guided: followed the Day 9 Lab
 
 ## Topology
 
@@ -25,16 +22,16 @@
 
 ## Lab Tasks
 
-- [ ] 1. Configure the hostname of R1, SW1, and SW2
+- [x] 1. Configure the hostname of R1, SW1, and SW2
 
-- [ ] 2. Configure the appropriate IP addresses on R1, PC1, PC2, PC3, PC4
+- [x] 2. Configure the appropriate IP addresses on R1, PC1, PC2, PC3, PC4
 
-- [ ] 3. Manually configure the speed and duplex on interfaces connected to other 
+- [x] 3. Manually configure the speed and duplex on interfaces connected to other 
     networking devices (not end hosts)
 
-- [ ] 4. Configure appropriate descriptions on each interface
+- [x] 4. Configure appropriate descriptions on each interface
 
-- [ ] 5. Disable interfaces which are not connected to other devices
+- [x] 5. Disable interfaces which are not connected to other devices
 
 ### Task 1 - Configure Networking Device Hostnames
 
@@ -363,13 +360,17 @@ SW2(config-if)#shutdown
 SW2(config-if)#desc ## Unused Port ##
 SW2(config-if)#
 ```
-## What happened and why
 
-{{2–4 sentences. Cover why one switch can't connect two subnets on its own, why the mask fault passed T3, and what Simulation mode showed for T4.}}
+## Evidence
 
-## Remember next time
+evidence.R1-running-config.txt
+evidence.SW1-running-config.txt
+evidence.SW2-running-config.txt
 
-- `ipconfig` — check it against the addressing plan before trusting a ping
-- Simulation mode — shows where a packet stops and why
 
-**Next:** Day 010 · **Re-run from memory on:** Day 008
+## Synopsis
+
+***Day 9 of Jeremy's IT Lab labs.***
+Similar to previous days about configuring IP addresses. Don't get too manage a lot of switch interfaces, so this was a good review.
+
+**Previous Day:** Day 008 · **Next:** Day 010
