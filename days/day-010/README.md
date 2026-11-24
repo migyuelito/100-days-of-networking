@@ -11,7 +11,7 @@
 
 | 📅 Date | ⏱️ Time spent | 📚 Source | 🛠️ Work type |
 |---|---|---|---|
-| 2026-11-23 | {{TIME}} | Jeremy's IT Lab, Free CCNA<br>Day 10 (IPv4 Header)<br>No lab for this day<br>▶️ [Playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | Lecture |
+| 2026-11-23 | N/A | Jeremy's IT Lab, Free CCNA<br>Day 10 (IPv4 Header)<br>No lab for this day<br>▶️ [Playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | Lecture |
 
 </div>
 
