@@ -16,7 +16,7 @@
 I work in IT helpdesk and I'm moving into network and network security engineering. This repo is 100 days of hands-on practice: I refresh CCNA skills by rebuilding and breaking guided labs, design my own scenarios, and finish with a campus network built in stages and tested against failures. Every result links to the evidence behind it.
 
 > [!NOTE]
-> **Progress:** Day 9 of 100 · Phase 1 · Last updated 2026-11-21
+> **Progress:** Day 10 of 100 · Phase 1 · Last updated 2026-11-23
 
 ## 👀 For Reviewers
 
@@ -60,6 +60,7 @@ Every entry labels what I did on my own:
 | ✏️ **Changed** | Added or changed a requirement the course didn't ask for |
 | 🩺 **Diagnosed** | Found and fixed a fault |
 | 💡 **Original** | My own scenario, with no course lab behind it |
+| 📖 **Lecture** | Watched the lesson; the course has no lab that day |
 
 ## 🧭 Roadmap
 
@@ -87,6 +88,7 @@ Pacing, scenario ideas, and the campus test plan: [docs/roadmap.md](docs/roadmap
 | [**007**](days/day-007/README.md) | 2026-11-15 | IPv4 addressing, part 1 | Jeremy's IT Lab<br>Day 7 + custom lab | 💡 **Original** | 📁 [Files](days/day-007/evidence/) |
 | [**008**](days/day-008/README.md) | 2026-11-16 | IPv4 addressing, part 2 | Jeremy's IT Lab<br>Day 8 + Day 8 Lab | 📘 **Guided** | 📁 [Files](days/day-008/evidence/) |
 | [**009**](days/day-009/README.md) | 2026-11-21 | Switch interfaces | Jeremy's IT Lab<br>Day 9 + Day 9 Lab | 📘 **Guided** | 📁 [Files](days/day-009/evidence/) |
+| [**010**](days/day-010/README.md) | 2026-11-23 | The IPv4 header | Jeremy's IT Lab<br>Day 10 (no lab) | 📖 **Lecture** | 📁 [Files](days/day-010/evidence/) |
 
 ## 🧠 Skills Map
 
