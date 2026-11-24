@@ -97,7 +97,7 @@ R1(config-if)# no shutdown
 
 > Manually configure the speed and duplex on interfaces connected to other networking devices (not end hosts).
 
-💡 **My solution:** 1000 Mbps, full duplex, on both ends of each link between network devices. I also set the PC-facing ports: 100/full on SW1 and 100/half on SW2.
+💡 **My solution:** 1000 Mbps, full duplex, on both ends of each link between network devices.
 
 ```
 R1(config)# int g0/0
@@ -288,7 +288,7 @@ Similar to previous days about configuring IP addresses. Don't get to manage a l
 
 <div align="center">
 
-⬅️ **Previous:** [Day 008 · IPv4 Addressing, Part 2](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-008/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** Day 010 · IPv4 Header ➡️
+⬅️ **Previous:** [Day 008 · IPv4 Addressing, Part 2](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-008/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** [Day 010 · IPv4 Header](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-010/README.md) ➡️
 
 **[⬆ Back to top](#readme-top)**
 
