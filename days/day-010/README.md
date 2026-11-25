@@ -72,7 +72,7 @@ No lab for this day, so I studied the IPv4 header and kept working toward my For
 
 <div align="center">
 
-⬅️ **Previous:** [Day 009 · Switch Interfaces](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-009/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** Day 011 · Routing Fundamentals ➡️
+⬅️ **Previous:** [Day 009 · Switch Interfaces](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-009/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** [Day 011 · Routing Fundamentals & Static Routing](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-011/README.md) ➡️
 
 **[⬆ Back to top](#readme-top)**
 
