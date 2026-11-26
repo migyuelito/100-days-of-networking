@@ -1,12 +1,12 @@
-# Day 006 — Packet Tracer setup and the subnet boundary
+# Day 012 — The Life of a Packet
 
 <!-- Pre-drafted plan. Fill in every {{ }} with what you actually did and saw, tick the boxes you completed, and delete lines you didn't do. -->
 
 | Date | Time spent | Source | Work type |
 |---|---|---|---|
-| {{2026-11-14}} | 13 min | Jeremy's IT Lab, Free CCNA: Day 6 (Ethernet LAN Switching pt. 2) and Day 6 Lab (Analyzing Ethernet Switching) — [playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | **Guided** |
+| 2026-11-25 | 13 min | Jeremy's IT Lab, Free CCNA: Day 12 (The Life of a Packet) and Day 12 Lab (The Life of a Packet) — [playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | **Guided** |
 
-**Goal:** Learn about how Switches learn Layer 2 addressing and how ARP helps with providing devices destination 
+**Goal:** Learn about how packets go accross networks.
 
 ## What I did
 
