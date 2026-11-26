@@ -21,23 +21,6 @@
 
 - [x] **Guided:** Used Day 12 as a review day: went through the Life of a Packet lab, which walks a packet across the network, and revisited my previous labs.
 
-## 🔁 Review: One Ping, Hop by Hop
-
-PC1 pinging PC2 across the three routers from [Day 11's lab](../day-011/README.md):
-
-| Hop | Source MAC 🔄 | Destination MAC 🔄 | Source → destination IP 🔒 | TTL |
-|:--|:--|:--|:--|:--:|
-| PC1 → R1 | PC1 | R1 G0/1 | 192.168.1.1 → 192.168.3.1 | 128 |
-| R1 → R2 | R1 G0/0 | R2 G0/0 | 192.168.1.1 → 192.168.3.1 | 127 |
-| R2 → R3 | R2 G0/1 | R3 G0/0 | 192.168.1.1 → 192.168.3.1 | 126 |
-| R3 → PC2 | R3 G0/1 | PC2 | 192.168.1.1 → 192.168.3.1 | 125 |
-
-<sub>🔄 rewritten at every hop · 🔒 the same end to end</sub>
-
-- **Routers rebuild the frame, not the packet:** each one strips the Ethernet header, looks up the destination IP in its routing table, subtracts 1 from the TTL, and wraps the packet in a new frame for the next hop.
-- **ARP finds each next hop's MAC:** the first time through, every device has to ask, which is why Day 11's first ping lost three packets, one per router.
-- **Switches pass frames along untouched:** SW1 and SW2 forward by destination MAC without changing anything.
-
 ## 📝 Synopsis
 
 ***Day 12 of Jeremy's IT Lab.***
