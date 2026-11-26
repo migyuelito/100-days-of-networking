@@ -1,130 +1,55 @@
-# Day 012 — The Life of a Packet
+<div align="center">
+<a id="readme-top"></a>
 
-<!-- Pre-drafted plan. Fill in every {{ }} with what you actually did and saw, tick the boxes you completed, and delete lines you didn't do. -->
+# 💻 Day 012 — The Life of a Packet
 
-| Date | Time spent | Source | Work type |
+**A review day: how one ping crosses the network, hop by hop**
+
+[![Day](https://img.shields.io/badge/Day-012_%2F_100-0D274D?style=for-the-badge)](https://github.com/migyuelito/100-days-of-networking)
+![Topic](https://img.shields.io/badge/Topic-Life_of_a_Packet-049FD9?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Review_Day-2EA44F?style=for-the-badge)
+
+| 📅 Date | ⏱️ Time spent | 📚 Source | 🛠️ Work type |
 |---|---|---|---|
-| 2026-11-25 | 13 min | Jeremy's IT Lab, Free CCNA: Day 12 (The Life of a Packet) and Day 12 Lab (The Life of a Packet) — [playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | **Guided** |
+| 2026-11-25 | 13 min | Jeremy's IT Lab, Free CCNA<br>Day 12 (The Life of a Packet)<br>Day 12 Lab (Life of a Packet)<br>▶️ [Playlist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ) | Guided |
 
-**Goal:** Learn about how packets go accross networks.
+</div>
 
-## What I did
+> 🎯 **Goal:** Learn how packets travel across networks.
 
-- [x] Guided: Followed the Day 6 lab instructions in Packet Tracer to test pings and Switch dynamically learining Mac addresses.
+## 📋 What I Did
 
-## Topology
+- [x] **Guided:** Used Day 12 as a review day: went through the Life of a Packet lab, which walks a packet across the network, and revisited my previous labs.
 
-evidence/006-topology.drawio.png
+## 🔁 Review: One Ping, Hop by Hop
 
-No default gateways; there's no router in this design.
+PC1 pinging PC2 across the three routers from [Day 11's lab](../day-011/README.md):
 
-| Host | Address | Mask |
-|---|---|---|
-| PC1 | 192.168.1.1 | 255.255.255.0 |
-| PC2 | 192.168.1.2 | 255.255.255.0 |
-| PC3 | 192.168.1.3 | 255.255.255.0 |
-| PC4 | 192.168.1.4 | 255.255.255.0 |
-## Lab Tasks
+| Hop | Source MAC 🔄 | Destination MAC 🔄 | Source → destination IP 🔒 | TTL |
+|:--|:--|:--|:--|:--:|
+| PC1 → R1 | PC1 | R1 G0/1 | 192.168.1.1 → 192.168.3.1 | 128 |
+| R1 → R2 | R1 G0/0 | R2 G0/0 | 192.168.1.1 → 192.168.3.1 | 127 |
+| R2 → R3 | R2 G0/1 | R3 G0/0 | 192.168.1.1 → 192.168.3.1 | 126 |
+| R3 → PC2 | R3 G0/1 | PC2 | 192.168.1.1 → 192.168.3.1 | 125 |
 
-Both switches have an empty MAC address table, and all PCs have an empty ARP table.
+<sub>🔄 rewritten at every hop · 🔒 the same end to end</sub>
 
-- [x] 1. If PC1 pings to PC3, what messages will be sent over the network, 
-     and which devices will receive them?
-     **My Solution**: Since PC1 doesn't know the destination MAC for PC3 it will send an ARP Request with the destination of the IP address. This ARP Request will broadcast to every device connected to the SW1 and SW2 other than PC1 for SW1 and SW1 for SW2.
+- **Routers rebuild the frame, not the packet:** each one strips the Ethernet header, looks up the destination IP in its routing table, subtracts 1 from the TTL, and wraps the packet in a new frame for the next hop.
+- **ARP finds each next hop's MAC:** the first time through, every device has to ask, which is why Day 11's first ping lost three packets, one per router.
+- **Switches pass frames along untouched:** SW1 and SW2 forward by destination MAC without changing anything.
 
-- [x] 2. Send the ping and use Packet Tracer's 'simulation mode' to verify your answer.
+## 📝 Synopsis
 
-- [x] 3. Use pings to generate network traffic and allow the switches to learn the MAC addresses 
-     of all PCs on the network.
+***Day 12 of Jeremy's IT Lab.***
 
-- [x] 4. Use 'show' commands on the switches to identify the MAC address of each PC.
+A bit of a freebie day: I used it to review how packets move through a network and to go back over my previous labs.
 
-- [x] 5. Clear the dynamic MAC addresses from the MAC address table of each switch.
+---
 
-## Tests
+<div align="center">
 
-| Test | Expected | Actual | Evidence |
-|---|---|---|---|
-| T1 · PC1 → PC2, same subnet | Replies (the first may time out while ARP resolves) | {{ACTUAL}} | [03](evidence/03-t1-ping-pc1-to-pc2.txt) |
-| T2 · PC1 → PC3, different subnet | No replies: PC1 sees 192.168.2.10 as remote and has no gateway to send it to | {{ACTUAL}} | [04](evidence/04-t2-ping-pc1-to-pc3.txt) |
-| T3 · Fault (PC2 at /16) · PC1 → PC2 | Still replies: each host still sees the other as local, so the fault hides | {{ACTUAL}} | [05](evidence/05-t3-ping-pc1-to-pc2-mask-fault.txt) |
-| T4 · Fault (PC2 at /16) · PC2 → PC3 | No replies: even if the request reaches PC3, PC3 sees PC2 as remote and has no gateway for the reply | {{ACTUAL}} | [06](evidence/06-t4-ping-pc2-to-pc3-mask-fault.txt) · [07](evidence/07-t4-simulation-mode.png) |
-| T5 · Fix · `ipconfig` on PC2 | Mask back to 255.255.255.0, matching the plan | {{ACTUAL}} | [08](evidence/08-t5-ipconfig-pc2-fixed.txt) |
+⬅️ **Previous:** [Day 011 · Routing Fundamentals & Static Routing](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-011/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** Day 013 · Subnetting, Part 1 ➡️
 
-## Evidence
+**[⬆ Back to top](#readme-top)**
 
-SW1 CLI Output:
-SW1>en
-SW1#show mac-
-SW1#show mac-address-table 
-          Mac Address Table
--------------------------------------------
-
-Vlan    Mac Address       Type        Ports
-----    -----------       --------    -----
-
-   1    0001.647b.3119    DYNAMIC     Gig0/1
-   1    0004.9a6e.d870    DYNAMIC     Gig0/1
-   1    00d0.d3ad.9cab    DYNAMIC     Fa0/1
-SW1#show mac-address-table 
-          Mac Address Table
--------------------------------------------
-
-Vlan    Mac Address       Type        Ports
-----    -----------       --------    -----
-
-   1    0001.647b.3119    DYNAMIC     Gig0/1
-   1    0004.9a6e.d870    DYNAMIC     Gig0/1
-   1    0060.5c56.14d3    DYNAMIC     Fa0/2
-   1    00d0.d3ad.9cab    DYNAMIC     Fa0/1
-SW1#clear ma
-SW1#clear mac-
-SW1#clear mac-address-table dyna
-SW1#clear mac-address-table dynamic 
-SW1#show mac-address
-SW1#show mac-address-table 
-          Mac Address Table
--------------------------------------------
-
-Vlan    Mac Address       Type        Ports
-----    -----------       --------    -----
-
-SW1#
-
-SW2 CLI Output:
-SW2>en
-SW2#show mac-address-table
-          Mac Address Table
--------------------------------------------
-
-Vlan    Mac Address       Type        Ports
-----    -----------       --------    -----
-
-   1    0001.647b.3119    DYNAMIC     Fa0/2
-   1    0004.9a6e.d870    DYNAMIC     Fa0/1
-   1    0060.5c56.14d3    DYNAMIC     Gig0/1
-   1    00d0.d3ad.9cab    DYNAMIC     Gig0/1
-SW2#
-SW2#clear mac-
-SW2#clear mac-address-table dynamic
-SW2#clear mac-address-table dynamic 
-SW2#show mac-address-table
-          Mac Address Table
--------------------------------------------
-
-Vlan    Mac Address       Type        Ports
-----    -----------       --------    -----
-
-SW2#
-
-## Key Takeaways
-
-## Command Cheat Sheet
-
-## Synopsis
-
-Day 6 of Jeremy's IT Lab labs.
-
-Getting more hands on into the CLI. A lot of information I have already knew still.
-
-**Next:** Day 007 · IPv4 Addressing (part1) · **Previous:** Day 005 · Ethernet LAN Switching (part 1)
+</div>

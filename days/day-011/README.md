@@ -7,7 +7,7 @@
 
 [![Day](https://img.shields.io/badge/Day-011_%2F_100-0D274D?style=for-the-badge)](https://github.com/migyuelito/100-days-of-networking)
 ![Topic](https://img.shields.io/badge/Topic-Static_Routes-049FD9?style=for-the-badge)
-![Tasks](https://img.shields.io/badge/Tasks-2%2F2_Complete-2EA44F?style=for-the-badge)
+![Labs](https://img.shields.io/badge/Labs-2%2F2_Complete-2EA44F?style=for-the-badge)
 
 | 📅 Date | ⏱️ Time spent | 📚 Source | 🛠️ Work type |
 |---|---|---|---|
@@ -52,10 +52,11 @@ Two LANs at opposite ends, joined by three routers. Every network is a /24 (255.
 
 ## ✅ Lab Tasks
 
-> **Starting state:** No device has any configuration, and the switches don't need any.
+> **Starting state:** In Lab 1, no device has any configuration, and the switches don't need any. Lab 2 uses the same topology, but its devices come already configured, with problems to find.
 
 - [x] [**Task 1**](#task-1--configure-all-devices) — Configure the PCs and routers according to the network diagram (hostnames, IP addresses, etc.). Remember to configure the gateway on the PCs
 - [x] [**Task 2**](#task-2--configure-static-routes) — Configure static routes on the routers to enable PC1 to successfully ping PC2
+- [x] [**Lab 2**](#lab-2--troubleshoot-the-network) — Troubleshoot the preconfigured network so PC1 can ping PC2
 
 ## 🏷️ Part 1 — Addresses and Gateways
 
@@ -134,6 +135,26 @@ PC1 reached PC2 across all three routers. The first ping got 1 reply out of 4, t
 
 📄 **Evidence:** [PC1 ping screenshot](evidence/config-static-routes/ping-confirmation.png)
 
+## 🩺 Part 3 — Troubleshooting Static Routes
+
+### Lab 2 — Troubleshoot the network
+
+> Same topology and addressing as Lab 1, but the lab file comes already configured, with problems. Find and fix them so PC1 can ping PC2.
+
+💡 **What I found and fixed:**
+
+| # | Device | What was wrong | Fix |
+|:--:|:--|:--|:--|
+| 1 | {{ }} | {{ }} | {{ }} |
+
+<p align="center">
+  <img src="evidence/troubleshooting-routes/ping-confirmation.png" width="720" alt="PC1's Command Prompt after the Lab 2 fixes: the first ping to 192.168.3.1 gets 1 reply out of 4 after three timeouts; the second gets 4 out of 4, with TTL=125.">
+</p>
+
+After the fixes, PC1 reached PC2 the same way it did in Lab 1: 1 reply out of 4 on the first ping, then 4 out of 4, with **TTL=125**.
+
+📄 **Evidence:** [PC1 ping after the fixes](evidence/troubleshooting-routes/ping-confirmation.png)
+
 ## 🧪 Tests
 
 <!-- Start each Actual with ✅ (matched) or ❌ (didn't match) so results scan at a glance. -->
@@ -143,6 +164,7 @@ PC1 reached PC2 across all three routers. The first ping got 1 reply out of 4, t
 | T1 · PC1 pings PC2, first try | Replies once ARP has run | ✅ 1 of 4; the first three timed out | [04](evidence/config-static-routes/ping-confirmation.png) |
 | T2 · PC1 pings PC2, second try | 4 of 4 replies | ✅ 4 of 4, TTL=125 | [04](evidence/config-static-routes/ping-confirmation.png) |
 | T3 · Static routes saved | 1 on R1, 2 on R2, 1 on R3 | ✅ All four in the running configs | [01](evidence/config-static-routes/router1_config.txt) · [02](evidence/config-static-routes/router2_config.txt) · [03](evidence/config-static-routes/router3_config.txt) |
+| T4 · Lab 2, after the fixes | 4 of 4 replies | ✅ 4 of 4, TTL=125 | [05](evidence/troubleshooting-routes/ping-confirmation.png) |
 
 ## 📁 Evidence
 
@@ -151,7 +173,8 @@ PC1 reached PC2 across all three routers. The first ping got 1 reply out of 4, t
 | 01 | [router1_config.txt](evidence/config-static-routes/router1_config.txt) | R1's running config: addresses and its static route |
 | 02 | [router2_config.txt](evidence/config-static-routes/router2_config.txt) | R2's running config: addresses and both static routes |
 | 03 | [router3_config.txt](evidence/config-static-routes/router3_config.txt) | R3's running config: addresses and its static route |
-| 04 | [ping-confirmation.png](evidence/config-static-routes/ping-confirmation.png) | PC1 pinging PC2 across all three routers |
+| 04 | [ping-confirmation.png](evidence/config-static-routes/ping-confirmation.png) | Lab 1: PC1 pinging PC2 across all three routers |
+| 05 | [ping-confirmation.png](evidence/troubleshooting-routes/ping-confirmation.png) | Lab 2: PC1 pinging PC2 after the fixes |
 
 ## 🧠 Key Takeaways
 
@@ -216,7 +239,7 @@ Getting more hands-on in the CLI. A lot of this information I already knew.
 
 <div align="center">
 
-⬅️ **Previous:** [Day 010 · IPv4 Header](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-010/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** Day 012 · The Life of a Packet ➡️
+⬅️ **Previous:** [Day 010 · IPv4 Header](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-010/README.md) &nbsp;&nbsp;•&nbsp;&nbsp; **Next:** [Day 012 · The Life of a Packet](https://github.com/migyuelito/100-days-of-networking/blob/main/days/day-012/README.md) ➡️
 
 **[⬆ Back to top](#readme-top)**
 
